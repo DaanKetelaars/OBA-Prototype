@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OBA</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="searchBar">
+        <input type="submit" id="submitBtn" value="ZOEKEN">
+    </form>
+    <main>
+        <section data-route="normal">
+            <h2>Zoeken...</h2>
+        </section>
+        <section data-route="detail" class="disabled">
+            <h2>Resultaten</h2>
+            <a href="#">terug naar home</a>
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+    <script src="./modules/routie.js"></script>
+</body>
+
+</html>
