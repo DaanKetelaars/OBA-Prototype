@@ -1,20 +1,17 @@
-const renderData = keys => {
+const renderData = cleanData => {
     const section = document.querySelector("main section");
     const ul = document.createElement("ul");
     section.appendChild(ul)
 
-    const newData = keys;
+    const newData = cleanData;
 
     newData.forEach(book => {
         const books = `
         <a href="#book/${book.id}">
-            <figure>
-                <figcaption>
+            <div>
                 <h2>${book.title}</h2>
                 <p>${book.authors}</p>
-                </figcaption>
-                <img src=${book.coverimage} alt="${book.title}">
-            </figure>
+            </div>
         </a>
     `;
         const li = document.createElement('li');

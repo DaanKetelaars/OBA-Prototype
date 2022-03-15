@@ -14,13 +14,10 @@ const routing = newData => {
 
             filterOnID.forEach(book => {
                 const books = `
-                    <figure>
-                        <figcaption>
+                    <div>
                         <h2>${book.title} - ${book.author}</h2>
                         <p>${book.description}</p>
-                        </figcaption>
-                        <img src="${book.coverimage}" alt="${book.title}">
-                    </figure>
+                    </div>
             `;
                 const li = document.createElement('li');
                 li.innerHTML = books;

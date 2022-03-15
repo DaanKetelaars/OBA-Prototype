@@ -1,3 +1,4 @@
+// data
 import {
     getData
 } from "./getData.js";
@@ -8,21 +9,28 @@ import {
     routing
 } from "./routing.js";
 
-const fetchData = () => {
+// get button value
+import {
+    getBtnValue
+} from "../getBtnValue.js";
+// remove books when list is selected
+import {
+    removeBooks
+} from "../removeBooks.js";
 
 
-    const allBooks = document.querySelectorAll("section ul");
 
-    allBooks.forEach(item => {
-        item.remove()
-    })
+const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=classification:informatieboek%20';
+const key = "1e19898c87464e239192c8bfe422f280"
+
+getBtnValue()
 
 
-    const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=classification:informatieboek%20';
-    const key = "1e19898c87464e239192c8bfe422f280"
-    const result = document.getElementById("searchBar").value;
+const fetchData = (btnValue) => {
 
-    const api = `${endpoint}${result}&authorization=${key}&refine=true&output=json`
+    removeBooks()
+
+    const api = `${endpoint}${btnValue}&authorization=${key}&refine=true&output=json`
     fetch(api)
         .then(response => {
             return response.json();
@@ -30,6 +38,9 @@ const fetchData = () => {
         .then(getData)
         .then(renderData)
         .then(routing)
+        .catch(error => {
+            console.log(`log ${error}`);
+        });
 }
 
 

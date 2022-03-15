@@ -10,19 +10,34 @@
 </head>
 
 <body>
-    <form>
-        <input type="text" id="searchBar">
-        <input type="submit" id="submitBtn" value="ZOEKEN">
-    </form>
+
+
+    <!-- results -->
     <main>
+
+        <!-- search results   -->
         <section data-route="normal">
-            <h2>Zoeken...</h2>
+            <header>
+                <h1>De zoekbank voor dé jonge ondernemer</h1>
+                <p>
+                    Geen idee waar je moet starten, of wat inspiratie nodig? De OBA staat voor je klaar. Vindt in deze
+                    zoekbank
+                    de juiste boeken die jou gaan helpen met een succesvolle onderneming.
+                </p>
+                <nav>
+                    <button value="ondernemen">Ondernemen</button>
+                    <button value="economie">Economie</button>
+                    <button value="onderneming">Onderneming</button>
+                    <button value="eigen bedrijf">Eigen bedrijf</button>
+                </nav>
+            </header>
         </section>
+        <!-- detail result   -->
         <section data-route="detail" class="disabled">
-            <h2>Resultaten</h2>
             <a href="#">terug naar home</a>
         </section>
     </main>
+
     <script type="module" src="index.js"></script>
     <script src="./modules/routie.js"></script>
 </body>
