@@ -1,49 +1,37 @@
-// data
-import {
-    getData
-} from "./getData.js";
-import {
-    renderData
-} from "./renderData.js";
-import {
-    routing
-} from "./routing.js";
+// import {
+//     fetchBooks
+// } from "./fetchBooks.js";
 
-// get button value
-import {
-    getBtnValue
-} from "../getBtnValue.js";
-// remove books when list is selected
-import {
-    removeBooks
-} from "../removeBooks.js";
-
-
-
-const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=classification:informatieboek%20';
-const key = "1e19898c87464e239192c8bfe422f280"
-
-getBtnValue()
-
-
-const fetchData = (btnValue) => {
-
-    removeBooks()
-
-    const api = `${endpoint}${btnValue}&authorization=${key}&refine=true&output=json`
-    fetch(api)
-        .then(response => {
-            return response.json();
-        })
-        .then(getData)
-        .then(renderData)
-        .then(routing)
-        .catch(error => {
-            console.log(`log ${error}`);
-        });
-}
+// fetchBooks()
+// const fetchQuotes = () => {
+//     const api = "https://type.fit/api/quotes"
+//     console.log(api);
+//     fetch(api)
+//         .then(response => {
+//             return response.json();
+//         })
+//         .then(data => {
+//             let titleArr = [];
+//             let result = '';
+//             let i = 0;
+//             let size = 10;
+//             let items = data.slice(0, size);
+//             const fruit = document.getElementById('fruit');
+//             const titles = items.map(item => {
+//                 return item.text
+//             });
+//             titleArr.push(titles)
+//             const item = titleArr[Math.floor(Math.random() * titleArr.length)];
+//             fruit.innerHTML = item[0];
+//             setInterval(() => {
+//                 fruit.innerHTML = item[i++];
+//                 if (i == item.length) i = 0;
+//             }, 5000)
+//         })
+// }
 
 
-export {
-    fetchData
-}
+// export {
+//     fetchBooks,
+//     fetchQuotes
+// }

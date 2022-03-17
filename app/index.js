@@ -1,5 +1,7 @@
 import {
-    fetchData
-} from "./modules/data/fetchData.js"
+    fetchBooks
+} from "./modules/data/fetchBooks.js"
 
-fetchData()
+fetchBooks()
+
+// fetchQuotes()

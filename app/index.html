@@ -6,36 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>OBA</title>
 </head>
 
 <body>
-
+    <span id="fruit"></span>
 
     <!-- results -->
     <main>
 
         <!-- search results   -->
-        <section data-route="normal">
+        <div data-route="normal">
             <header>
-                <h1>De zoekbank voor dé jonge ondernemer</h1>
-                <p>
-                    Geen idee waar je moet starten, of wat inspiratie nodig? De OBA staat voor je klaar. Vindt in deze
-                    zoekbank
-                    de juiste boeken die jou gaan helpen met een succesvolle onderneming.
-                </p>
                 <nav>
-                    <button value="ondernemen">Ondernemen</button>
-                    <button value="economie">Economie</button>
-                    <button value="onderneming">Onderneming</button>
-                    <button value="eigen bedrijf">Eigen bedrijf</button>
+                    <a href=""><img src="./assets/logo.png" alt="Logo website"></a>
+                    <a href="https://www.oba.nl/"><img src="./assets/oba-logo.png" alt="Logo OBA"></a>
                 </nav>
+                <section>
+                    <h1>Alle <span>informatie</span> voor je eigen onderneming.</h1>
+                    <p>
+                        Geen idee waar je moet starten, of wat inspiratie nodig? De <span>OBA</span> staat voor je
+                        klaar. Vindt in
+                        deze
+                        zoekbank de juiste boeken die jou gaan helpen met een succesvolle onderneming.
+                    </p>
+                </section>
             </header>
-        </section>
+
+            <section>
+                <h2>Wij hebben je alvast wat <span>op weg</span> geholpen.</h2>
+                <p>Bij het kiezen van één van de onderwerpen hieronder krijg je een lijst met verschillende boeken.
+                    Boeken over dit onderwerp.</p>
+                <button value="Ondernemerschap">Ondernemerschap</button>
+                <button value="Leiderschap">Leiderschap</button>
+                <button value="Startende ondernemingen">Startende ondernemingen</button>
+                <h3></h3>
+            </section>
+
+        </div>
         <!-- detail result   -->
-        <section data-route="detail" class="disabled">
+        <div data-route="detail" class="disabled">
             <a href="#">terug naar home</a>
-        </section>
+        </div>
     </main>
 
     <script type="module" src="index.js"></script>

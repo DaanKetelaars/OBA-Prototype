@@ -1,14 +1,12 @@
 import {
-    fetchData
-} from "./data/fetchData.js";
-
-
+    fetchBooks
+} from "./data/fetchBooks.js";
 const getBtnValue = () => {
-    const buttons = document.querySelectorAll("header nav button");
-    buttons.forEach(el => {
-        el.addEventListener('click', function () {
-            const btnValue = el.value;
-            fetchData(btnValue)
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(item => {
+        item.addEventListener('click', function () {
+            const btnValue = item.value;
+            fetchBooks(btnValue)
         });
     });
 }

@@ -1,5 +1,5 @@
 const removeBooks = () => {
-    const allBooks = document.querySelectorAll("section ul");
+    const allBooks = document.querySelectorAll("div ul");
 
     allBooks.forEach(item => {
         item.remove()

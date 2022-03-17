@@ -1,23 +1,27 @@
-const routing = newData => {
+function routing(newData) {
 
-    const sections = document.querySelectorAll('section');
-    const section = document.querySelector(`section[data-route="detail"]`);
+    const divs = document.querySelectorAll('div');
+    const div = document.querySelector(`div[data-route="detail"]`);
     const ul = document.createElement("ul");
-    section.appendChild(ul)
+    div.appendChild(ul)
 
     routie({
-        'book/:id': (id) => {
+        'book/': (title) => {
+
             while (ul.firstChild) {
                 ul.removeChild(ul.firstChild);
             }
-            let filterOnID = newData.filter(book => book.id === id);
+            let filter = newData.filter(book => {
+                book.title = book.title.replace(/\s/g, '');
+                book.title === title;
+            });
 
-            filterOnID.forEach(book => {
+            filter.forEach(book => {
                 const books = `
-                    <div>
+                    <article>
                         <h2>${book.title} - ${book.author}</h2>
-                        <p>${book.description}</p>
-                    </div>
+                        <p>${book.summaries}</p>
+                    </article>
             `;
                 const li = document.createElement('li');
                 li.innerHTML = books;
@@ -31,11 +35,11 @@ const routing = newData => {
     });
 
     function updateUI(route) {
-        sections.forEach((item) => {
+        divs.forEach((item) => {
             item.classList.add("disabled");
         });
-        let activeSection = document.querySelector(`[data-route=${route}]`);
-        activeSection.classList.remove("disabled");
+        let activeDiv = document.querySelector(`[data-route=${route}]`);
+        activeDiv.classList.remove("disabled");
     }
 
     return newData
