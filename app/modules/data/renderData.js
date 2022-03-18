@@ -8,12 +8,10 @@ function renderData(keys) {
     newData.forEach(book => {
         const books = `
         <a href="${book.detailLink}" target="_blank">
-            <figure>
-                <figcaption>
-                    <h2>${book.title}</h2>
-                    <p>${book.authors} <br/> ${book.summaries}</p>
-                </figcaption>
-            </figure>
+            <article>
+                    <h4>${book.title}</h4>
+                    <p>${book.summaries}</p>
+            </article>
         </a>
     `;
         const li = document.createElement('li');

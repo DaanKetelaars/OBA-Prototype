@@ -13,6 +13,10 @@ import {
 import {
     removeBooks
 } from "../removeBooks.js";
+import {
+    loading,
+    hideLoading
+} from "../loader/loader.js";
 
 
 
@@ -23,15 +27,15 @@ getBtnValue()
 
 
 const fetchBooks = (btnValue) => {
-
+    loading()
     removeBooks()
 
 
     const title = document.querySelector('h3');
     if (btnValue) {
-        title.innerHTML = "Hallo"
+        title.innerHTML = btnValue
     } else {
-        title.innerHTML = "OKE"
+        title.innerHTML = "Laatste over ondernemen"
     }
 
     const api = btnValue ?
@@ -40,6 +44,7 @@ const fetchBooks = (btnValue) => {
     console.log(api);
     fetch(api)
         .then(response => {
+            hideLoading()
             return response.json();
         })
         .then(getData)

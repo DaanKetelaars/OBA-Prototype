@@ -7,6 +7,11 @@ const getBtnValue = () => {
         item.addEventListener('click', function () {
             const btnValue = item.value;
             fetchBooks(btnValue)
+            const active = document.querySelector('.active');
+            if (active) {
+                active.classList.remove('active');
+            }
+            item.classList.add('active');
         });
     });
 }

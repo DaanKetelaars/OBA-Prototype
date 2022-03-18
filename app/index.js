@@ -2,6 +2,9 @@ import {
     fetchBooks
 } from "./modules/data/fetchBooks.js"
 
-fetchBooks()
+import {
+    fetchQuotes
+} from "./modules/data/fetchQuotes.js"
 
-// fetchQuotes()
+fetchBooks()
+fetchQuotes()

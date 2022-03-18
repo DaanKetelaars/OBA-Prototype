@@ -9,52 +9,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>OBA</title>
+    <title>OBA - Jong Ondernemer</title>
 </head>
 
 <body>
-    <span id="fruit"></span>
-
+    <header>
+        <nav>
+            <a href=""><img src="./assets/logo.png" alt="Logo website"></a>
+            <a href="https://www.oba.nl/"><img src="./assets/logo-oba.svg" alt="Logo OBA"></a>
+        </nav>
+    </header>
     <!-- results -->
     <main>
-
-        <!-- search results   -->
         <div data-route="normal">
-            <header>
-                <nav>
-                    <a href=""><img src="./assets/logo.png" alt="Logo website"></a>
-                    <a href="https://www.oba.nl/"><img src="./assets/oba-logo.png" alt="Logo OBA"></a>
-                </nav>
-                <section>
-                    <h1>Alle <span>informatie</span> voor je eigen onderneming.</h1>
-                    <p>
-                        Geen idee waar je moet starten, of wat inspiratie nodig? De <span>OBA</span> staat voor je
-                        klaar. Vindt in
-                        deze
-                        zoekbank de juiste boeken die jou gaan helpen met een succesvolle onderneming.
-                    </p>
-                </section>
-            </header>
-
             <section>
-                <h2>Wij hebben je alvast wat <span>op weg</span> geholpen.</h2>
-                <p>Bij het kiezen van één van de onderwerpen hieronder krijg je een lijst met verschillende boeken.
-                    Boeken over dit onderwerp.</p>
-                <button value="Ondernemerschap">Ondernemerschap</button>
-                <button value="Leiderschap">Leiderschap</button>
-                <button value="Startende ondernemingen">Startende ondernemingen</button>
-                <h3></h3>
+                <h1>Alle informatie voor dé jonge ondernemer.</h1>
+                <p>
+                    Geen idee waar je moet starten, of wat inspiratie nodig? De OBA staat voor je klaar. Vindt in deze
+                    zoekbank de juiste boeken die jou gaan helpen met een succesvolle onderneming.
+                </p>
             </section>
 
-        </div>
-        <!-- detail result   -->
-        <div data-route="detail" class="disabled">
-            <a href="#">terug naar home</a>
+            <section>
+                <h2 class="title">Genius is one percent inspiration and ninety-nine percent perspiration.</h2>
+                <p class="author"></p>
+            </section>
+
+            <section>
+                <p>
+                    Bij het kiezen van één van de onderwerpen hieronder krijg je een lijst met verschillende boeken.
+                    Boeken over dit onderwerp.
+                </p>
+                <button value="Ondernemerschap" class="active">Entrepreneur</button>
+                <button value="Leiderschap">Leadership</button>
+                <button value="Startende ondernemingen">Startup</button>
+            </section>
+
+            <h3></h3>
+            <div id="loader">Het duurt iets langer dan verwacht, excuus...</div>
+
+
         </div>
     </main>
 
     <script type="module" src="index.js"></script>
-    <script src="./modules/routie.js"></script>
 </body>
 
 </html>

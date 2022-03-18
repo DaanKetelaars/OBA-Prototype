@@ -2,6 +2,9 @@
 01 - BASE
 02 - HEADER
 03 - SECTION
+04 - BUTTONS
+05 - ITEMS
+06 - RESPONSIVE
 *****/
 
 
@@ -9,12 +12,9 @@
 /*** BASE ***/
 
 :root {
-  --white: #FFF;
-  --black: #000;
-  --red: #ff0000;
-  --light-grey: #f8f8f8;
-  --grey: #DDD;
-  --grid-padding: 2rem;
+  --purple: #776CFF;
+  --light: #E1DFFE;
+  --dark: #100F14;
 }
 
 * {
@@ -22,11 +22,8 @@
   font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
-  color: var(--black);
-}
-
-span {
-  color: var(--red);
+  background-color: var(--dark);
+  color: var(--light)
 }
 
 .disabled {
@@ -41,51 +38,44 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+#loader {
+  opacity: 0;
+  transition: all .6s ease-in-out;
+  padding: 2rem;
+  font-size: .75em;
+  color: var(--purple);
+}
+
+#loader.display {
+  opacity: 1;
+  font-size: .75em;
+}
+
 /*** END BASE ***/
+
 
 
 /*** HEADER ***/
 header {
-  background: var(--light-grey);
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid var(--grey);
-}
-
-header section {
-  background: transparent;
-  padding: var(--grid-padding);
-}
-
-header section h1 {
-  font-size: 2em;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 2rem;
-}
-
-header section p {
-  font-size: .75em;
-  line-height: 1.5;
-  font-weight: 400;
 }
 
 header nav {
-  background: var(--white);
-  padding: 1rem 2.5rem;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  padding: 3rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-header nav a {
-  text-decoration: none;
 }
 
 header nav a img {
-  width: 2.25rem;
+  width: 3rem;
 }
 
 /*** END HEADER ***/
@@ -93,155 +83,177 @@ header nav a img {
 
 /*** SECTION ***/
 section {
-  background: var(--white);
-  padding: var(--grid-padding);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  width: 100%;
-  height: 100%;
+  padding: 3rem 2rem;
 }
 
-section h2 {
-  font-size: 1.5em;
+section:nth-child(1) h1 {
+  font-size: 2em;
+  font-weight: 700;
   line-height: 1;
-  font-weight: 600;
+  color: var(--purple);
   margin-bottom: 2rem;
 }
 
-section p {
+section:nth-child(1) p {
   font-size: .75em;
-  line-height: 1.5;
-  font-weight: 400;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
-section button {
-  background: var(--red);
-  border: none;
-  border-radius: 100px;
-  padding: .75rem;
+section:nth-child(2) {
+  background: var(--purple);
+  padding: 0;
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+}
+
+section:nth-child(2) h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1;
   color: var(--white);
+  text-align: center;
+  background: transparent;
+  margin-bottom: 2rem;
+}
+
+section:nth-child(2) p {
+  font-size: .75em;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  background: transparent;
+}
+
+section:nth-child(3) p {
+  font-size: .75em;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 2rem;
 }
 
 /*** END SECTION ***/
 
+/*** BUTTONS ***/
 
-/*** ARTICLE HOME ***/
-div[data-route="normal"] ul li a figure {
-  margin: 2.5rem;
-  border-bottom: 1px solid var(--grey);
-}
-
-div[data-route="normal"] ul li a {
-  text-decoration: none;
-}
-
-div[data-route="normal"] ul li a figure figcaption h2 {
-  font-size: 1em;
-  line-height: 1;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-decoration: underline;
-}
-
-div[data-route="normal"] ul li a figure figcaption p {
+button {
+  background: var(--purple);
+  border-radius: 100px;
+  border: none;
+  padding: .5rem;
   font-size: .75em;
-  line-height: 1.5;
-  font-weight: 400;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 3rem;
+  opacity: 0.5;
 }
 
-/*** END ARTICLE HOME ***/
+button.active {
+  opacity: 1;
+}
+
+/*** END BUTTONS ***/
+
+
+/*** ITEMS ***/
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--white);
+  padding: 2rem;
+}
+
+ul li a article {
+  margin: 2rem;
+  border-bottom: 1px solid var(--purple);
+}
+
+ul li a article h4 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--white);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul li a article p {
+  font-size: .75em;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/*** END ITEMS ***/
 
 
 
 /*** RESPONSIVE ***/
-@media(min-width: 1024px) {
-  :root {
-    --grid-padding: 4rem 15rem;
+@media (min-width: 1024px) {
+  header nav {
+    padding: 5rem 10rem;
   }
 
   section {
-    margin-bottom: 0;
+    padding: 5rem 10rem 10rem 10rem;
   }
 
-  section h2 {
-    font-size: 2em;
-  }
-
-  section p {
-    font-size: 1em;
-    width: 44ch;
-    margin-bottom: 2rem;
-  }
-
-  section button {
-    font-size: 1em;
-    padding: 1rem 1.5rem;
-  }
-
-  header nav {
-    padding: 1rem 15rem;
-  }
-
-  header section h1 {
+  section:nth-child(1) h1 {
     font-size: 3em;
+    width: 20ch;
   }
 
-  header section p {
+  section:nth-child(1) p {
     font-size: 1em;
-    width: 44ch;
+    line-height: 1.5;
+    width: 50ch;
   }
 
-  div[data-route="normal"] ul {
-    padding: var(--grid-padding);
-    padding-top: 1rem;
+  section:nth-child(2) {
+    height: 40rem;
   }
 
-  div[data-route="normal"] ul li a figure {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 50vh;
-    width: 100%;
-    padding-bottom: 3rem;
-    margin-top: 3rem;
+  section:nth-child(2) h2 {
+    font-size: 2.5em;
+    width: 20ch;
   }
 
-
-  div[data-route="normal"] ul li a figure img {
-    height: 100%;
-    width: 40%;
-    object-fit: cover;
-    background-image: url("./assets/placeholder.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.1);
-    transition: all .6s ease-in-out;
-  }
-
-  div[data-route="normal"] ul li a figure img:hover {
-    transform: translateY(-1em);
-    box-shadow: 15px 20px 20px 0 rgba(0, 0, 0, 0.05);
-  }
-
-  div[data-route="normal"] ul li a figure figcaption {
-    padding: 3rem 4rem;
-    width: 60%;
-    height: 100%;
-  }
-
-  div[data-route="normal"] ul li a figure figcaption h2 {
-    font-size: 1.5em;
-    line-height: 1;
-  }
-
-  div[data-route="normal"] ul li a figure figcaption p {
+  section:nth-child(2) p {
     font-size: 1em;
+  }
+
+  section:nth-child(3) {
+    padding-bottom: 5rem;
+  }
+
+  section:nth-child(3) p {
+    font-size: 1em;
+    width: 50ch;
+  }
+
+  button {
+    padding: 1.5rem 4rem;
+    font-size: 1em;
+    margin-right: 1rem;
+  }
+
+  h3 {
+    padding: 3rem 10rem;
+  }
+
+  ul li a article {
+    margin: 3rem 10rem;
+  }
+
+  #loader {
+    padding: 0 10rem;
   }
 }
 
