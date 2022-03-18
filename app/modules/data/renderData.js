@@ -10,7 +10,7 @@ function renderData(keys) {
         <a href="${book.detailLink}" target="_blank">
             <article>
                     <h4>${book.title}</h4>
-                    <p>${book.summaries}</p>
+                    <p>${book.summaries ? book.summaries : "-"}</p>
             </article>
         </a>
     `;
