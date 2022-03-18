@@ -7,7 +7,7 @@
 (https://shields.io/)
 
 ## Description
-For our first project week we had to develop a prototype for the OBA (Amsterdam Library). We got 4 days and the access to the API key of the OBA to create a concept based on 3 userstories.
+For our first project week we had to develop a prototype for the OBA (Amsterdam Library). We got 4 days and the access to the API key of the OBA to create a concept based on 3 user stories. I chose the "Entrepreneurship" user story.
 
 ## User Stories
 
