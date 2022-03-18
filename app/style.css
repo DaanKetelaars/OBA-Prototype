@@ -253,6 +253,7 @@ ul li a article p {
   }
 
   #loader {
+    font-size: 1em;
     padding: 0 10rem 2rem 10rem;
   }
 }
