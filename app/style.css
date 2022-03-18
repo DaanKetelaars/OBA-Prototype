@@ -45,7 +45,7 @@ a {
 
 #loader {
   opacity: 0;
-  transition: all .6s ease-in-out;
+  transition: opacity .6s ease-in-out;
   padding: 2rem;
   font-size: .75em;
   color: var(--purple);
@@ -268,6 +268,14 @@ ul li a article p {
 
   ul li a article {
     margin: 3rem 10rem;
+  }
+
+  ul li a article h4 {
+    font-size: 1.5em;
+  }
+
+  ul li a article p {
+    font-size: 1em;
   }
 
   #loader {
