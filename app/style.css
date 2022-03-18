@@ -23,7 +23,8 @@
   padding: 0;
   margin: 0;
   background-color: var(--dark);
-  color: var(--light)
+  color: var(--light);
+  scroll-behavior: smooth;
 }
 
 .disabled {
@@ -95,6 +96,16 @@ section:nth-child(1) h1 {
 }
 
 section:nth-child(1) p {
+  font-size: .75em;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 3rem;
+}
+
+section:nth-child(1) a {
+  background: var(--purple);
+  border-radius: 100px;
+  padding: .5rem;
   font-size: .75em;
   font-weight: 500;
   line-height: 1.25;
@@ -196,7 +207,7 @@ ul li a article p {
 
 
 /*** RESPONSIVE ***/
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   header nav {
     padding: 5rem 10rem;
   }
@@ -214,6 +225,13 @@ ul li a article p {
     font-size: 1em;
     line-height: 1.5;
     width: 50ch;
+    margin-bottom: 5rem;
+  }
+
+  section:nth-child(1) a {
+    padding: 1.5rem 4rem;
+    font-size: 1em;
+    margin-right: 1rem;
   }
 
   section:nth-child(2) {
