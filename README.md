@@ -25,9 +25,9 @@ As a young entrepreneur I want to find more information about setting up a busin
 
 My concept is based on a platform for young entrepreneurs that might just got started with their own business or just looking for some inspiration. I gave the design some fresh colors to represent this and added some inspirational quotes. The OBA API automatically calls some starting information about entrepreneurship and if you click the buttons you can change the subject. Clicking on the items will direct you to a detail page of the OBA.
 
-<img src="./app/assets/screenshots/screenshot-01.png" alt="example of the live application" width="300px" />
-<img src="./app/assets/screenshots/screenshot-02.png" alt="example of the live application" width="300px"/>
-<img src="./app/assets/screenshots/screenshot-03.png" alt="example of the live application" width="300px"/>
+<img src="./app/assets/screenshots/screenshot-01.png" alt="example of the live application" width="500px" />
+<img src="./app/assets/screenshots/screenshot-02.png" alt="example of the live application" width="500px"/>
+<img src="./app/assets/screenshots/screenshot-03.png" alt="example of the live application" width="500px"/>
 
 ## Table of Contents
 
