@@ -10,7 +10,9 @@ Shields that represent my project - They change over time. (https://shields.io/)
 
 Rijks-Online is a Single Page Application that let's the user search all of the extraordinary artworks from the Rijksmuseum. This is being done with the help of the Rijks-API. With this API it's possible to showcase all of the artworks that the Rijksmuseum offers.
 
-<img src="screenshot.png" alt="example of the live application" />
+<img src="./app/assets/screenshots/screenshot-01.png" alt="example of the live application" />
+<img src="./app/assets/screenshots/screenshot-02.png" alt="example of the live application" />
+<img src="./app/assets/screenshots/screenshot-03.png" alt="example of the live application" />
 
 ## Table of Contents
 
