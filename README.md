@@ -7,27 +7,27 @@
 (https://shields.io/)
 
 ## Description
+
 For our first project week we had to develop a prototype for the OBA (Amsterdam Library). We got 4 days and the access to the API key of the OBA to create a concept based on 3 user stories. I chose the "Entrepreneurship" user story.
 
 ## User Stories
 
 **Nutrition and dietetics** <br/>
-As a sporty twenties I want to delve into the effect of healthy food on my condition, to learn how I can practice my sport better. 
+As a sporty twenties I want to delve into the effect of healthy food on my condition, to learn how I can practice my sport better.
 
 **Digital citizenship** <br/>
-As an older citizen, I want to learn how to find, complete and send digital forms from the municipality, in order to better cope with the digitization of society. 
+As an older citizen, I want to learn how to find, complete and send digital forms from the municipality, in order to better cope with the digitization of society.
 
 **Entrepreneurship** <br/>
 As a young entrepreneur I want to find more information about setting up a business, in order to have a better chance of success.
 
-
 ## Concept
-My concept is based on a platform for young entrepreneurs that might just got started with their own business or just looking for some inspiration. I gave the design some fresh colors to represent this and added some inspirational quotes. The OBA API automatically calls some starting information about entrepreneurship and if you click the buttons you can change the subject. Clicking on the items will direct you to a detail page of the OBA.  
 
+My concept is based on a platform for young entrepreneurs that might just got started with their own business or just looking for some inspiration. I gave the design some fresh colors to represent this and added some inspirational quotes. The OBA API automatically calls some starting information about entrepreneurship and if you click the buttons you can change the subject. Clicking on the items will direct you to a detail page of the OBA.
 
-<img src="./app/assets/screenshots/screenshot-01.png" alt="example of the live application" />
-<img src="./app/assets/screenshots/screenshot-02.png" alt="example of the live application" />
-<img src="./app/assets/screenshots/screenshot-03.png" alt="example of the live application" />
+<img src="./app/assets/screenshots/screenshot-01.png" alt="example of the live application" width="300px" />
+<img src="./app/assets/screenshots/screenshot-02.png" alt="example of the live application" width="300px"/>
+<img src="./app/assets/screenshots/screenshot-03.png" alt="example of the live application" width="300px"/>
 
 ## Table of Contents
 
@@ -52,7 +52,6 @@ https://zoeken.oba.nl/api/v1/
 ```
 
 Quote API is already installed and no key is necessary.
-
 
 Host this project on live-server or localhost.
 
