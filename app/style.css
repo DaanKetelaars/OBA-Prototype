@@ -180,6 +180,10 @@ h3 {
   padding: 2rem;
 }
 
+ul {
+  margin-bottom: 5rem;
+}
+
 ul li a article {
   margin: 2rem;
   border-bottom: 1px solid var(--purple);
